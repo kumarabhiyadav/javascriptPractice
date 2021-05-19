@@ -1,9 +1,29 @@
 l1 = [2,4,3];
 l2 = [5,6,4];
-const reducer = (acc,cru)=>acc+cru;
-l1=l1.map(String);
-console.log(l1.reverse().reduce(reducer));
-l2=l2.map(String);
-console.log((l2.reverse().reduce(reducer)));
-res=parseInt(l1.reverse().reduce(reducer))+parseInt(l2.reverse().reduce(reducer));
-res=res.toString().split('').reverse().join("")
+// // l1 = [9,9,9,9,9,9,9]
+// // l2 = [9,9,9,9]
+// res=[]
+// l1=l1.reverse().toString().split(',').join('')
+// l2=l2.reverse().toString().split(',').join('')
+// ans=parseInt(l1)+parseInt(l2);
+// ans=ans.toString()
+// for (n of ans){
+//      res.push(parseInt(n))
+// }
+// console.log(res.reverse());
+
+var addTwoNumbers = function(l1, l2) {
+     const reducer = (acc,cru)=>acc+cru;
+ res=[]
+ l1=l1.reverse().toString().split(',').join('')
+ l2=l2.reverse().toString().split(',').join('')
+ ans=parseInt(l1)+parseInt(l2);
+ ans=ans.toString()
+ for (n of ans){
+      res.push(parseInt(n))
+ }
+ return res.reverse();
+
+ }
+
+ console.log(addTwoNumbers(l1,l2));
